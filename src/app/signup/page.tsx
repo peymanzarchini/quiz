@@ -17,7 +17,7 @@ export default function SignUp() {
   } = useForm();
 
   const onSubmit = (data: FieldValues) => {
-    localStorage.setItem("email", data.email);
+    if (typeof window !== 'undefined') localStorage.setItem("email", data.email);
     reset();
     router.replace("/");
     window.location.reload();
