@@ -9,9 +9,9 @@ import useQuiz from "@/contexts/quiz";
 export default function Home() {
   const { dispatch } = useQuiz();
   const router = useRouter();
-  let email: strin | null = ""
+  let email: string | null = "";
 
-  if (typeof window !== 'undefined') {
+  if (typeof window !== "undefined") {
     email = localStorage.getItem("email");
   }
 

@@ -17,7 +17,9 @@ type AuthProviderProps = {
  */
 
 export default function AuthProvider({ children }: AuthProviderProps) {
-  const [isSignedIn, setIsSignedIn] = useState((typeof window !== 'undefined') && !!localStorage.getItem("email"));
+  const [isSignedIn, setIsSignedIn] = useState(
+    typeof window !== "undefined" && !!localStorage.getItem("email"),
+  );
 
   return (
     <AuthContext.Provider value={{ isSignedIn, setIsSignedIn }}>
