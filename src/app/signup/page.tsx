@@ -12,7 +12,6 @@ export default function SignUp() {
     register,
     handleSubmit,
     formState: { errors, isSubmitting },
-    reset,
     getValues,
   } = useForm();
 

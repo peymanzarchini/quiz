@@ -28,7 +28,6 @@ export default function Login() {
     register,
     handleSubmit,
     formState: { errors, isSubmitting },
-    reset,
   } = useForm();
 
   const onSubmit = (data: FieldValues) => {
