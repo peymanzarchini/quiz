@@ -33,7 +33,8 @@ export default function Login() {
 
   const onSubmit = (data: FieldValues) => {
     if (data.email === testData.email && data.password === testData.password) {
-      localStorage.setItem("email", data.email);
+      if (typeof window !== "undefined")
+        localStorage.setItem("email", data.email);
       router.replace("/");
       reset();
       window.location.reload();

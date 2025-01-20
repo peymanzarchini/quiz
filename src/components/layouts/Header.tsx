@@ -20,10 +20,14 @@ type HeaderProps = {
 
 export default function Header({ className }: Readonly<HeaderProps>) {
   const router = useRouter();
-  const email = localStorage.getItem("email");
+  let email: string | null = "";
+
+  if (typeof window !== "undefined") {
+    email = localStorage.getItem("email");
+  }
 
   const handleOnLogout = () => {
-    localStorage.removeItem("email");
+    if (typeof window !== "undefined") localStorage.removeItem("email");
     router.replace("/");
     window.location.reload();
   };
