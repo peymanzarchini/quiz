@@ -9,7 +9,7 @@ import useQuiz from "@/contexts/quiz";
 export default function Home() {
   const { dispatch } = useQuiz();
   const router = useRouter();
-  let email = localStorage.getItem("email");
+  const email = localStorage.getItem("email");
 
   const handleStartButton = () => {
     dispatch({ type: "reset" });
