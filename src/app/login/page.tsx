@@ -34,7 +34,7 @@ export default function Login() {
     if (data.email === testData.email && data.password === testData.password) {
       if (typeof window !== "undefined")
         localStorage.setItem("email", data.email);
-      router.replace("/");
+      router.push("/");
       window.location.reload();
     } else {
       setError("Invalid email or password");
