@@ -18,7 +18,7 @@ export default function SignUp() {
   const onSubmit = (data: FieldValues) => {
     if (typeof window !== "undefined")
       localStorage.setItem("email", data.email);
-    router.replace("/");
+    router.push("/");
   };
 
   return (
